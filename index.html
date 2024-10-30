@@ -46,16 +46,30 @@
                         ></path>
                     </svg>
                 </button>
+                <button id="widthToggle" class="width-toggle">
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        viewBox="0 0 24 24"
+                    >
+                        <path
+                            d="M19 12h-2V5h-2v7h-2V5h-2v7H9V5H7v7H5V5H3v14h18v-7zM3 21v2h18v-2H3zM21 1H3v2h18V1z"
+                        />
+                    </svg>
+                </button>
             </div>
-            <header>
-                <h1
-                    contenteditable="true"
-                    data-placeholder="Untitled Note"
-                ></h1>
-            </header>
-            <section class="content">
-                <textarea placeholder="Start writing..."></textarea>
-            </section>
+            <div class="note-container">
+                <header>
+                    <h1
+                        contenteditable="true"
+                        data-placeholder="Untitled Note"
+                    ></h1>
+                </header>
+                <section class="content">
+                    <textarea placeholder="Start writing..."></textarea>
+                </section>
+            </div>
         </main>
     </body>
 </html>

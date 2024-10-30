@@ -11,6 +11,8 @@ const mainContent = document.querySelector("main");
 const sidebarToggle = document.querySelector(".sidebar-toggle");
 const newNoteBtn = document.querySelector(".new-note-btn");
 const sidebarContent = document.querySelector(".sidebar-content");
+const widthToggle = document.getElementById("widthToggle");
+const noteContainer = document.querySelector(".note-container");
 
 // Generate unique ID for notes
 function generateId() {
@@ -266,3 +268,7 @@ function toggleSidebar() {
 }
 
 createThemeToggle();
+
+widthToggle.addEventListener("click", () => {
+  noteContainer.classList.toggle("narrow");
+});
