@@ -49,9 +49,9 @@ h1[contenteditable="true"] {
     transition: border-color 0.2s;
 }
 
-h1[contenteditable="true"]:focus {
+/* h1[contenteditable="true"]:focus {
     border-bottom-color: #e0e0e0;
-}
+} */
 
 .tooltip {
     padding: 0.5rem 2rem;
@@ -177,4 +177,160 @@ main.sidebar-closed {
 
 .new-note-btn:hover .icon {
     transform: scale(1.3);
+}
+
+.notes-list {
+    margin-top: 1rem;
+}
+
+.note-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.75rem;
+    margin: 0.5rem 0;
+    background: white;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.note-item:hover {
+    background: #eee;
+}
+
+.note-item.active {
+    background: #e8f5e9;
+    border-left: 3px solid #4caf50;
+}
+
+.note-item span {
+    flex: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.delete-note {
+    background: none;
+    border: none;
+    color: #666;
+    font-size: 1.2rem;
+    cursor: pointer;
+    padding: 0 0.5rem;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+.note-item:hover .delete-note {
+    opacity: 1;
+}
+
+.delete-note:hover {
+    color: #f44336;
+}
+
+.sidebar-content {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.notes-list {
+    margin-top: 1rem;
+    overflow-y: auto;
+    flex: 1;
+    /* Add padding to account for potential scrollbar */
+    padding-right: 8px;
+}
+
+.notes-section {
+    margin-bottom: 1.5rem;
+}
+
+.section-title {
+    font-size: 0.85rem;
+    color: #888;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+    padding: 0 0.75rem;
+    font-weight: 500;
+}
+
+.note-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.75rem;
+    margin: 0.25rem 0;
+    background: transparent;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    color: #333;
+}
+
+.note-item:hover {
+    background: rgba(0, 0, 0, 0.05);
+}
+
+.note-item.active {
+    background: rgba(76, 175, 80, 0.1);
+    border-left: 3px solid #4caf50;
+}
+
+.note-item span {
+    flex: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.delete-note {
+    background: none;
+    border: none;
+    color: #666;
+    font-size: 1.2rem;
+    cursor: pointer;
+    padding: 0 0.5rem;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+.note-item:hover .delete-note {
+    opacity: 1;
+}
+
+.delete-note:hover {
+    color: #f44336;
+}
+
+/* Dark theme adjustments */
+.sidebar {
+    //background: #1a1a1a;
+    //border-right: 1px solid #333;
+}
+
+.note-item {
+    //color: #fff;
+}
+
+.section-title {
+    color: #888;
+}
+
+.note-item:hover {
+    //background: rgba(255, 255, 255, 0.05);
+}
+
+.note-item.active {
+    background: rgba(76, 175, 80, 0.15);
+}
+
+.delete-note {
+    color: #888;
+}
+
+.delete-note:hover {
+    //color: #ff5252;
 }
