@@ -1,9 +1,9 @@
 const titleElement = document.querySelector("h1");
 const pageTitle = document.querySelector("title");
 const textarea = document.querySelector("textarea");
-
-let saveTimeout;
-const SAVE_INTERVAL = 0;
+const sidebar = document.querySelector(".sidebar");
+const mainContent = document.querySelector("main");
+const sidebarToggle = document.querySelector(".sidebar-toggle");
 
 function saveContent() {
   const content = {
@@ -11,11 +11,6 @@ function saveContent() {
     text: textarea.value,
   };
   localStorage.setItem("note", JSON.stringify(content));
-}
-
-function debouncedSave() {
-  clearTimeout(saveTimeout);
-  saveTimeout = setTimeout(saveContent, SAVE_INTERVAL);
 }
 
 function loadContent() {
@@ -28,12 +23,20 @@ function loadContent() {
   }
 }
 
-titleElement.addEventListener("input", () => {
+function loadTitle() {
   const newTitle = titleElement.textContent || "Untitled Note";
   pageTitle.textContent = newTitle;
-  debouncedSave();
-});
+  saveContent();
+}
 
-textarea.addEventListener("input", debouncedSave);
+function toggleSidebar() {
+  sidebar.classList.toggle("closed");
+  mainContent.classList.toggle("sidebar-closed");
+  sidebarToggle.classList.toggle("closed");
+}
 
 loadContent();
+
+textarea.addEventListener("input", saveContent);
+titleElement.addEventListener("input", loadTitle);
+sidebarToggle.addEventListener("click", toggleSidebar);

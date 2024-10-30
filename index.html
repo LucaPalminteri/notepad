@@ -7,13 +7,52 @@
         <script src="/scripts.js" type="module" defer></script>
     </head>
     <body>
+        <aside class="sidebar">
+            <div class="sidebar-content">
+                <button class="new-note-btn">
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="icon"
+                    >
+                        <line x1="12" y1="5" x2="12" y2="19"></line>
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                    </svg>
+                    New Note
+                </button>
+            </div>
+        </aside>
+
         <main>
+            <div class="tooltip">
+                <button id="sidebarToggle" class="sidebar-toggle">
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        x="0px"
+                        y="0px"
+                        width="16"
+                        height="16"
+                        viewBox="0 0 50 50"
+                    >
+                        <path
+                            d="M 5 8 A 2.0002 2.0002 0 1 0 5 12 L 45 12 A 2.0002 2.0002 0 1 0 45 8 L 5 8 z M 5 23 A 2.0002 2.0002 0 1 0 5 27 L 45 27 A 2.0002 2.0002 0 1 0 45 23 L 5 23 z M 5 38 A 2.0002 2.0002 0 1 0 5 42 L 45 42 A 2.0002 2.0002 0 1 0 45 38 L 5 38 z"
+                        ></path>
+                    </svg>
+                </button>
+            </div>
+            <!-- <hr /> -->
             <header>
                 <h1
                     contenteditable="true"
                     data-placeholder="Untitled Note"
                 ></h1>
-                <div id="saveStatus" class="hidden"></div>
             </header>
             <section class="content">
                 <textarea placeholder="Start writing..."></textarea>
