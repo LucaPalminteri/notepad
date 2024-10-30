@@ -120,7 +120,9 @@ header {
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    transition: left 0.3s ease;
+    transition:
+        left 0.3s ease,
+        background-color 0.3s ease;
     background: var(--bg-primary);
     color: var(--text-primary);
 }
@@ -131,6 +133,11 @@ header {
 
 .sidebar-toggle.closed {
     left: 20px;
+}
+
+.sidebar-toggle svg {
+    fill: var(--text-primary);
+    transition: fill 0.3s ease;
 }
 
 /* Notes List Styles */
